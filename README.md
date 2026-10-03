@@ -47,7 +47,9 @@ Each fictional example includes every source it references.
 
 ## Status
 
-The repository is publicly published. This reference package defines convention version **0.1**, an open proposal. No formal tagged v0.1 release or GitHub Release exists. This repository has no maintained work tracker.
+The repository is publicly published. [The specification](SPEC.md) defines convention version **0.1**, an open proposal. Formal immutable release snapshots are represented by [Git tags](https://github.com/angel-wm/ai-repository-context/tags) and [GitHub Releases](https://github.com/angel-wm/ai-repository-context/releases) when present.
+
+`main` may continue to evolve after a release. Inspect the relevant tag or release when a fixed snapshot is required. This repository has no maintained work tracker.
 
 ## Maintaining this package
 

@@ -12,7 +12,7 @@
 
 Publication/handoff source: [package status](README.md#status).
 Canonical published repository: [angel-wm/ai-repository-context](https://github.com/angel-wm/ai-repository-context).
-Published/default handoff branch: `main`.
+Default handoff branch: `main`, which may continue to evolve after a release. For a fixed snapshot, inspect the relevant Git tag or GitHub Release, when present.
 
 Describe only the snapshot available during the task. Remote readers leave unseen local work **Unknown**. Local readers distinguish working changes, commits, and publication evidence; a clean or committed checkout is not proof of publication. Qualify cached remote comparisons. Do not copy or maintain a "latest commit" value in this map; establish the visible snapshot during each task. The convention version is not a release claim.
 
