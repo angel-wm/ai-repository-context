@@ -10,10 +10,11 @@
 
 ## Published state
 
-Publication/handoff source: **Not documented**; see [package status](README.md#status).
-Canonical repository/ref: **Not documented**. No publication record is maintained here.
+Publication/handoff source: [package status](README.md#status).
+Canonical published repository: [angel-wm/ai-repository-context](https://github.com/angel-wm/ai-repository-context).
+Published/default handoff branch: `main`.
 
-Describe only the snapshot available during the task. Remote readers leave unseen local work **Unknown**. Local readers distinguish working changes, commits, and publication evidence; a clean or committed checkout is not proof of publication. Qualify cached remote comparisons. The convention version is not a release claim.
+Describe only the snapshot available during the task. Remote readers leave unseen local work **Unknown**. Local readers distinguish working changes, commits, and publication evidence; a clean or committed checkout is not proof of publication. Qualify cached remote comparisons. Do not copy or maintain a "latest commit" value in this map; establish the visible snapshot during each task. The convention version is not a release claim.
 
 ## Source map
 

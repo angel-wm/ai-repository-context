@@ -49,7 +49,7 @@ Both fictional examples include every source they reference.
 
 ## Status
 
-This reference package defines convention version **0.1**, an open proposal. The version does not establish a published release. This repository has no maintained work tracker or publication record.
+The repository is publicly published. This reference package defines convention version **0.1**, an open proposal. No formal tagged v0.1 release or GitHub Release exists. This repository has no maintained work tracker.
 
 ## Maintaining this package
 
