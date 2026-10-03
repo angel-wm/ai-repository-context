@@ -43,6 +43,7 @@ flowchart TD
 - [Specification](SPEC.md): the universal Core and reader behavior; the sole normative definition.
 - [Feature-based example](examples/feature-based.md): a fictional notes application.
 - [Phase-based example](examples/phase-based.md): a fictional workshop-planning project.
+- [Generalization validation](examples/generalization-validation.md): four additional fictional work models and edge cases.
 - [Research and manual acceptance checklist](docs/research.md): alternatives, rationale, and bounded validation.
 
 Both fictional examples include every source they reference.

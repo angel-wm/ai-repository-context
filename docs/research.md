@@ -73,3 +73,96 @@ These outcomes come from reading the included fictional sources. Edge-case rows 
 Reviewed on 2026-10-03 for the initial local v0.1 documentation draft, comprising the specification, README, root map, template, two examples, this research/checklist document, and license. All 19 checklist rows were checked through document inspection, manual reading walkthroughs, and disposable structural inspection commands. The inspection found 25 actual local links/anchors and 23 fictional links/anchors matching their included sources. Size checks found 1,101 specification words and 45 template lines. Whitespace and file-scope checks passed.
 
 Results apply only to this local documentation draft and the stated reading scenarios. They do not establish a published release, later revision, example runtime behavior, or automatic assistant compatibility. Recheck after material changes. This record is supporting evidence, not a work tracker or publication record.
+
+## Phase 2 generalization validation
+
+The original checklist and validation record above remain historical evidence for the initial draft. This separate evaluation concerns [four additional fictional models and eleven variants](../examples/generalization-validation.md), developed on local branch `phase2/generalization-validation` from baseline `addcca02beb1c97ddf1c1649868f3331ddb96925`. No real repository serves as a test target. The sole normative contract remains [SPEC.md](../SPEC.md), version 0.1; its template is unchanged.
+
+### Four-model evaluation matrix
+
+The manual reading exercises below use each model's included sources. A successful mapping may establish an explicit information gap; it need not establish undocumented facts. Native selectors retain their meanings, including the level of completion and each unit's baseline.
+
+| Core question | Sprint | Release / milestone | Experiment / research | Maintenance / operations |
+| --- | --- | --- | --- | --- |
+| Can Project be mapped? | README describes Iteration Board. | README describes Package Ledger. | README describes Sample Study. | README describes Queue Care. |
+| Can Published State be mapped? | Handoff source locates the supplied snapshot, independent of completion. | Handoff distinguishes sharing from release closure and authorization. | Notebook handoff works without a release record. | Documentary handoff establishes no operational deployment. |
+| Can Work Model remain native? | Sprint and item states/closure rules remain distinct. | Release and change rules remain distinct. | Hypothesis outcomes and signed closure remain distinct; no implementation lifecycle. | Incident and maintenance states remain distinct. |
+| Can Current Work be determined? | S8 open; I4/I5 doing. | R3 preparing; C32 validating. | X5 running. | I1 mitigating; M1 executing. |
+| Can Last Completed Work be determined? | S7 for sprints; I3 for items; no invented cross-level ordering. | R2 for releases; C31 for changes; selection is level-specific. | X4 is last signed, with inconclusive outcome. | Last ledger entry M0 is complete under maintenance rules. |
+| Can Planned Work be represented? | S9 plan has an unmet S8-closeout dependency. | R4 plan does not authorize work or publication. | X6 proposal requires X5 closure and a start decision. | M2 queue entry requires M1 completion; no roadmap needed. |
+| Can Architecture remain native? | Board/store/filter/sorter design. | Formatter/assembler design. | Study and data-flow structure; no code required. | Queue/workers/store and relevant procedures. |
+| Can Decisions remain optional/native? | D1/D2 live in notes. | D1 lives with checks. | Q1/Q2 live in method rationale without ADRs. | D1 lives in a runbook without a formal log. |
+| Can Evidence be selected by unit/baseline? | I4/SB8 differs from I3/SB7 and S7/SB6. | C32/RC32 and R3/RA3 require different evidence. | X5/P2/D5/A1 differs from X4 and other protocol revisions. | M1/MB2 differs from M0/MB1 and I1/IB2. |
+| Can progressive loading avoid blanket reading? | Select item or sprint and stop at its answer/gap. | Select change or assembled release and relevant checks. | Select investigation, protocol, and matching result. | Select incident/task and relevant runbook sections. |
+
+| Work model | Final classification | Finding |
+| --- | --- | --- |
+| Sprint-based | Works as-is | Existing topic qualifiers and native selectors distinguish sprint and item completion. |
+| Release / milestone-based | Works as-is | Plans, change completion, release closure, authorization, and publication remain separate. |
+| Experiment / research-based | Works as-is | Native results and signed closure map without an implementation lifecycle. |
+| Maintenance / operations-based | Works as-is | Concurrent heterogeneous units and a queue map without a product roadmap. |
+
+### Six task-route results
+
+All 24 new-model routes were walked against the included sources. The linked model sections contain the exact selection paths and reading stops; this table records their resulting answers or gaps. Each result is limited to the fictional records.
+
+| Route | [Sprint](../examples/generalization-validation.md#sprint-task-routes) | [Release](../examples/generalization-validation.md#release-task-routes) | [Research](../examples/generalization-validation.md#research-task-routes) | [Operations](../examples/generalization-validation.md#operations-task-routes) |
+| --- | --- | --- | --- | --- |
+| Current state | S8 open, I4/I5 doing; completion is level-specific. | R3 preparing, C32 validating; no inferred publication. | X5 running; X4 last signed despite inconclusive outcome. | I1 mitigating and M1 executing; no service-health inference. |
+| Review current work | S8/SB8 review/closeout absent; I4/SB8 checks unrun. Stop at the selected gap. | C32/RC32 checks unrun; stop at missing checks. | X5 matching comparison inconclusive, signoff absent; stop at those limits. | I1 probe inconclusive, resolution/review absent; stop at that gap. |
+| Plan next work | S9 awaits absent S8 closeout; stop. | R4 awaits absent R3 closeout; stop. | X6 awaits absent X5 signed closure; stop. | M2 awaits M1 completion; stop while M1 executes. |
+| Architecture | Intended board/store/filter/sorter; stop at structural answer. | Intended formatter/assembler; stop at structural answer. | Intended grouped-observation study; stop at structural answer. | Intended queue/workers/store and procedure; stop at structural answer. |
+| Historical decision | D1 superseded by accepted D2; stop at no successor. | Accepted D1; stop at no recorded supersession. | Q1 superseded by accepted Q2; stop at no successor. | Runbook D1 accepted; stop at no recorded supersession. |
+| Evidence audit | I4/SB8 unrun; earlier units cannot validate it. | R3/RA3 assembled checks unrun; change checks cannot validate it. | X5/P2/D5/A1 inconclusive, no signoff; X4 cannot close it. | M1/MB2 unrun; M0's result cannot validate it. |
+
+### Eleven cross-cutting cases
+
+Each variant was read independently against the base excerpts and [variant definitions](../examples/generalization-validation.md#cross-cutting-variants). That document records sources, established facts, unknown/undocumented information, stops, and classification. Intentional missing context in E08 is a passing uncertainty-handling exercise, not a broken base-fixture reference.
+
+| Case | Observed reading result and stop | Final classification |
+| --- | --- | --- |
+| E01 No active work | Explicit State absence yields None; stop at State, without treating plans as active. | Works as-is |
+| E02 Multiple active Work Units | Both sprint items and heterogeneous operational units remain active; stop at selected state, expanding only for the requested review. | Works as-is |
+| E03 No formal roadmap | Native queue covers plans; without a maintained queue, Planned Work is Not documented and actual plans Unknown. Stop at queue/absence. | Works as-is |
+| E04 No formal decision log | Equivalent rationale answers history; removing it yields Not documented, not proof of no decisions. Stop at record/absence. | Works as-is |
+| E05 No formal release record | Handoff locates a snapshot without a release log; removing it leaves the source Not documented and publication unestablished. Stop at provenance/absence. | Works as-is |
+| E06 Stale summary | Topic-authoritative operational state wins over README summary; stop at State and report discrepancy. | Works as-is |
+| E07 Conflicting sources | Equal-authority same-snapshot conflict leaves X5 state Unknown; stop at unresolved disagreement. | Works as-is |
+| E08 Missing or broken reference | Known state/baseline survives; missing selected protocol blocks method-compliance claims. Stop at the missing section. | Works as-is |
+| E09 Evidence from another baseline | Different unit or protocol revision cannot validate selected X5 baseline; stop at mismatch. | Works as-is |
+| E10 Local work newer than published snapshot | Published, local-committed, and working changes stay distinct; unseen local work/publication remains Unknown. Stop at visible provenance. | Works as-is |
+| E11 Very little formal documentation | One README covers purpose/structure/work rules; other sources are Not documented and facts Unknown. Stop at the relevant section or absence. | Works as-is |
+
+### Existing-example regression controls
+
+The [feature](../examples/feature-based.md) and [phase](../examples/phase-based.md) examples were reread unchanged. All twelve control routes preserve their original native behavior; the new examples impose no parallel-work or closure rules on them.
+
+| Route | Feature control | Phase control |
+| --- | --- | --- |
+| Current state | State selects F2 active; Completions identifies F1 if needed. Stop at those records; retain one-active-feature rule. | State selects Build current and Design last closed. Stop at relevant State records; retain sequential phases. |
+| Review current work | F2 contract + N2 Evidence establish unrun checks and absent review. Stop at that gap; Structure is conditional. | Build scope + W2 checks establish unrun checks and absent closeout. Stop at that gap. |
+| Plan next work | State/Rules + F3 scope show queued export dependent on F1; deliberate authorization remains required. Stop after applicable dependency/completion evidence. | State/Rules + Validate scope require Build closure; Build checks show missing closeout. Stop at unmet predecessor gate. |
+| Architecture | DESIGN.md Structure describes editor/store/search intention; stop without runtime claims. | NOTES.md Structure describes catalog/schedule intention; stop without runtime claims. |
+| Historical decision | D1 accepted, no recorded successor; stop. | D1 accepted at Design, no recorded successor; stop. |
+| Evidence audit | F2/N2 lacks checks/review; F1/N1 cannot validate it. Stop at missing matching evidence. | Build/W2 lacks checks/closeout; Design/W1 cannot close it. Stop at missing matching evidence. |
+
+### Explanatory findings and decision gate
+
+Three findings are **Documentation clarification only**: review scope can mean native protocol/procedure without implementation; a plan can live in notes/queues without a roadmap; container/item completion uses qualified native selectors rather than a universal latest-unit order. The new document explains these interpretations. No normative text or template field needed alteration. No finding is **Possible future extension** or **Actual Core limitation**.
+
+1. **Does the existing v0.1 Core cover all tested work models?** Yes, for the six fictional models and stated reading exercises, including explicit gaps and uncertainty where sources cannot establish facts.
+2. **Were specification changes genuinely necessary?** No. All mappings use existing topics, columns, native selection rules, and absence/uncertainty meanings.
+3. **Were any findings explanatory only?** Yes, the three interpretations above; additions are examples and validation documentation.
+4. **Is there evidence for formal profiles?** No. Distinct workflows are described through native sources without formal profiles.
+5. **Is there evidence for a v0.2 semantic change?** No. No unrepresentable concept or incompatible structural requirement was found.
+6. **Can v0.1 remain unchanged?** Yes. SPEC.md and templates/REPO_CONTEXT.md remain unchanged.
+
+### Phase 2 validation record
+
+Reviewed on 2026-10-03 for the local Phase 2 documentation draft: one new generalization document, this appended research section, and one README discovery link, based on the baseline named above. All 24 new-model task routes, twelve existing-example control routes, and eleven edge-case groups were checked by manual reading against their included sources and stated variants. The four-model matrix accounts for all ten Core questions. All four models and eleven edge cases are Works as-is; the three interpretation findings are Documentation clarification only.
+
+Disposable structural inspection verified 37 actual local Markdown links/anchors and 64 fictional Markdown links/anchors across the six models, including all 41 in the new models. It also checked 72 fictional path mentions against included files/sections. Each new model has three sources besides its map; the combined document has 355 lines. All nine existing external Markdown destinations were retrieved successfully; their research comparisons were not reevaluated. E08 deliberately removes a protocol only within its variant; every base-fixture reference resolves. No permanent script, validator, schema, profile, or test framework was added.
+
+Scope and diff review confirmed exactly the three authorized paths, one README link without copied validation details, and preservation of the original research text, both regression examples, SPEC.md, the template, root map, and license. Whitespace checks passed. The new fictional material contains no external URLs or references to real/private projects; it was authored solely from invented data, without reading or copying external-project content. All file writes and Git mutations were confined to this repository and the Phase 2 branch; no other repository was used as a test target or modified by this work. Local main, cached origin/main, and the directly queried remote main remained at the baseline; the remote Phase 2 branch was absent at inspection.
+
+These results apply to this documentation content and the specified reading exercises. They establish neither runtime behavior, live operational observations, actual fictional publication, nor independent assistant compatibility. The local commit containing this record is not publication evidence. Recheck after material changes; the original validation record above retains its original scope.
