@@ -29,9 +29,14 @@ There are four source documents besides the map. Read the [sample map](#sample-m
 
 ## Published state
 
-Handoff source: [README handoff](README.md#handoff) and [state](CURRENT_STATE.md#state).
-Canonical repository/ref: **Not documented**; no actual remote exists in this fixture.
-These excerpts depict a supplied illustrative published snapshot. Remote readers leave unseen local work Unknown. In a real project, report the retrieved snapshot and distinguish local changes, commits, and publication evidence; clean or committed is not proof of publication.
+Handoff source: [README handoff](README.md#handoff) and
+[state](CURRENT_STATE.md#state).
+Canonical repository/ref: **Not documented**; no actual remote exists in
+this fixture.
+These excerpts depict a supplied illustrative published snapshot. Remote
+readers leave unseen local work Unknown. In a real project, report the
+retrieved snapshot and distinguish local changes, commits, and
+publication evidence; clean or committed is not proof of publication.
 
 ## Source map
 
@@ -46,15 +51,24 @@ These excerpts depict a supplied illustrative published snapshot. Remote readers
 
 ## Loading rules
 
-- Read applicable guidance and preserve roadmap rules and handoff requirements.
+- Read applicable guidance and preserve roadmap rules and handoff
+  requirements.
 - State: read State; load the last closeout only when relevant.
-- Review: select the current phase; read its roadmap scope and matching checks, then affected structure or decisions.
-- Plan: read state, roadmap rules, and the next phase's scope. Include required predecessor closeout and dependencies; a plan does not authorize starting.
-- Architecture: read Structure first; add relevant decisions or phase scopes only as needed.
+- Review: select the current phase; read its roadmap scope and matching
+  checks, then affected structure or decisions.
+- Plan: read state, roadmap rules, and the next phase's scope. Include
+  required predecessor closeout and dependencies; a plan does not
+  authorize starting.
+- Architecture: read Structure first; add relevant decisions or phase
+  scopes only as needed.
 - History: select a decision ID and any recorded supersession chain.
-- Evidence: select phase and baseline; closed-phase results do not establish current-phase validity.
-- Resolve links relative to this map. Select the named closeout section, not every historical section.
-- Apply topic authority; report unresolved conflicts, unavailable evidence, and unknowns. Stop when the answer is supported or a specific gap is established.
+- Evidence: select phase and baseline; closed-phase results do not
+  establish current-phase validity.
+- Resolve links relative to this map. Select the named closeout section,
+  not every historical section.
+- Apply topic authority; report unresolved conflicts, unavailable
+  evidence, and unknowns. Stop when the answer is supported or a
+  specific gap is established.
 ```
 
 ## Included source excerpts
@@ -67,11 +81,16 @@ These excerpts depict a supplied illustrative published snapshot. Remote readers
 ## Project
 
 Organize session topics and their available time slots.
-For project context and task-specific reading guidance, see [REPO_CONTEXT.md](REPO_CONTEXT.md).
+For project context and task-specific reading guidance, see
+[REPO_CONTEXT.md](REPO_CONTEXT.md).
 
 ## Handoff
 
-Use the shared published snapshot for phase handoff. All excerpts depict illustrative snapshot W2, including the earlier Design closeout from W1. A phase closes only after its exit checks, closeout, and publication condition in the roadmap are satisfied. No actual remote or publication exists outside this fictional example.
+Use the shared published snapshot for phase handoff. All excerpts depict
+illustrative snapshot W2, including the earlier Design closeout from W1.
+A phase closes only after its exit checks, closeout, and publication
+condition in the roadmap are satisfied. No actual remote or publication
+exists outside this fictional example.
 ```
 
 ### CURRENT_STATE.md
@@ -84,7 +103,8 @@ Use the shared published snapshot for phase handoff. All excerpts depict illustr
 Current phase: Build; state current; baseline W2.
 Last closed phase: Design, at W1; closeout: NOTES.md#design-closeout.
 Next planned phase: Validate; scope and dependencies: ROADMAP.md#plan.
-A wording correction to the shared documentation in W2 did not close Build or alter Design's completion baseline W1.
+A wording correction to the shared documentation in W2 did not close
+Build or alter Design's completion baseline W1.
 ```
 
 ### ROADMAP.md
@@ -94,7 +114,12 @@ A wording correction to the shared documentation in W2 did not close Build or al
 
 ## Rules
 
-Use phases sequentially, with states planned, current, and closed. Start a phase only after deliberate authorization and predecessor closure. Closure requires recorded passing exit checks, a closeout, and inclusion in the shared published snapshot. Phase handoff requires the predecessor closeout; additional structure/decisions are read when they affect the next phase.
+Use phases sequentially, with states planned, current, and closed. Start
+a phase only after deliberate authorization and predecessor closure.
+Closure requires recorded passing exit checks, a closeout, and inclusion
+in the shared published snapshot. Phase handoff requires the predecessor
+closeout; additional structure/decisions are read when they affect the
+next phase.
 
 ## Plan
 
@@ -112,21 +137,36 @@ Use phases sequentially, with states planned, current, and closed. Start a phase
 
 ## Structure
 
-Intended structure: a session catalog supplies topics; a schedule associates sessions with time slots. Runtime behavior is not demonstrated here.
+Intended structure: a session catalog supplies topics; a schedule
+associates sessions with time slots. Runtime behavior is not
+demonstrated here.
 
 ## Decisions
 
-D1, accepted at Design: use one shared schedule to avoid conflicting parallel copies. No superseding decision is recorded.
+D1, accepted at Design: use one shared schedule to avoid conflicting
+parallel copies. No superseding decision is recorded.
 
 ## Design closeout
 
-Design, baseline W1: illustrative record-definition checks PASS; closeout accepted and included in the shared published fixture. Design is closed under roadmap rules. This evidence establishes no Build or Validate result.
+Design, baseline W1: illustrative record-definition checks PASS;
+closeout accepted and included in the shared published fixture. Design
+is closed under roadmap rules. This evidence establishes no Build or
+Validate result.
 
 ## Build checks
 
-Build, baseline W2: scheduling checks NOT RUN; no Build closeout or closure publication recorded. No executable implementation or underlying reports are included in these excerpts.
+Build, baseline W2: scheduling checks NOT RUN; no Build closeout or
+closure publication recorded. No executable implementation or underlying
+reports are included in these excerpts.
 ```
 
 ## Reading walkthrough
 
-For "plan next work," read State and roadmap rules, then Validate's scope and dependency. Build is current and lacks exit checks and closeout, so Validate cannot start under the native rules. Follow the required predecessor selection to Build checks; the missing Build closeout is a specific gap. Design's closed state and the documentation correction do not satisfy Build's exit gate. Unrelated decision history and the full structure need not be loaded unless they affect planning. Unseen local progress remains unknown.
+For "plan next work":
+
+1. Read State and roadmap rules, then Validate's scope and dependency.
+2. Select its required predecessor, Build, and follow the reference to Build checks.
+3. Establish the gap: Build is current and lacks exit checks and closeout, so Validate cannot start under the native rules.
+4. Stop at the missing Build closeout. Design's closed state and the documentation correction do not satisfy Build's exit gate.
+
+Unrelated decision history and the full structure need not be loaded unless they affect planning. Unseen local progress remains unknown.

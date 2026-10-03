@@ -29,9 +29,14 @@ There are four source documents besides the map. Read the [sample map](#sample-m
 
 ## Published state
 
-Handoff source: [README handoff](README.md#handoff); native state: [feature state](FEATURES.md#state).
-Canonical repository/ref: **Not documented**; this fixture has no remote.
-Describe the supplied illustrative snapshot; remote readers cannot infer unseen local work. Local completion does not establish publication. A real reader must identify the visible snapshot and distinguish changes, commits, and publication evidence.
+Handoff source: [README handoff](README.md#handoff); native state:
+[feature state](FEATURES.md#state).
+Canonical repository/ref: **Not documented**; this fixture has no
+remote.
+Describe the supplied illustrative snapshot; remote readers cannot infer
+unseen local work. Local completion does not establish publication. A
+real reader must identify the visible snapshot and distinguish changes,
+commits, and publication evidence.
 
 ## Source map
 
@@ -47,14 +52,23 @@ Describe the supplied illustrative snapshot; remote readers cannot infer unseen 
 ## Loading rules
 
 - Read applicable guidance and preserve the feature rules.
-- State: read feature state; add the latest completion only if it explains the answer.
-- Review: select the active feature; read its contract, relevant evidence, and affected design sections.
-- Plan: read state and rules; then the queued feature's contract and dependencies. Queued is not authorized.
-- Architecture: read Structure; follow only relevant decision or contract references.
-- History: select a decision ID; follow its supersession references if present.
-- Evidence: select feature and baseline; other checks or reviews do not establish its validity.
-- Resolve links relative to this map. Patterns and headings are selectors, not bulk-reading instructions.
-- Apply topic authority; report unresolved conflicts, missing references, and unknown information. Stop when the answer is supported or a specific gap is established.
+- State: read feature state; add the latest completion only if it
+  explains the answer.
+- Review: select the active feature; read its contract, relevant
+  evidence, and affected design sections.
+- Plan: read state and rules; then the queued feature's contract and
+  dependencies. Queued is not authorized.
+- Architecture: read Structure; follow only relevant decision or
+  contract references.
+- History: select a decision ID; follow its supersession references if
+  present.
+- Evidence: select feature and baseline; other checks or reviews do not
+  establish its validity.
+- Resolve links relative to this map. Patterns and headings are
+  selectors, not bulk-reading instructions.
+- Apply topic authority; report unresolved conflicts, missing
+  references, and unknown information. Stop when the answer is supported
+  or a specific gap is established.
 ```
 
 ## Included source excerpts
@@ -67,11 +81,15 @@ Describe the supplied illustrative snapshot; remote readers cannot infer unseen 
 ## Project
 
 A simple application for creating and finding personal notes.
-For project context and task-specific reading guidance, see [REPO_CONTEXT.md](REPO_CONTEXT.md).
+For project context and task-specific reading guidance, see
+[REPO_CONTEXT.md](REPO_CONTEXT.md).
 
 ## Handoff
 
-Use the shared snapshot supplied for the handoff. Feature completion requires the feature rules, independently of publication. These excerpts represent illustrative snapshot N2; no actual publication is asserted and no remote is declared.
+Use the shared snapshot supplied for the handoff. Feature completion
+requires the feature rules, independently of publication. These excerpts
+represent illustrative snapshot N2; no actual publication is asserted
+and no remote is declared.
 ```
 
 ### FEATURES.md
@@ -81,7 +99,11 @@ Use the shared snapshot supplied for the handoff. Feature completion requires th
 
 ## Rules
 
-Use states queued, active, and done. Work on one active feature at a time. Deliberately select and authorize queued work before starting. Mark a feature done only after its contract is satisfied and passing checks plus an independent review are recorded for its completion baseline.
+Use states queued, active, and done. Work on one active feature at a
+time. Deliberately select and authorize queued work before starting.
+Mark a feature done only after its contract is satisfied and passing
+checks plus an independent review are recorded for its completion
+baseline.
 
 ## State
 
@@ -93,7 +115,8 @@ Use states queued, active, and done. Work on one active feature at a time. Delib
 
 ## Completions
 
-Completion 1: F1 completed at baseline N1; matching checks and review are in docs/EVIDENCE.md. No other completion is recorded.
+Completion 1: F1 completed at baseline N1; matching checks and review
+are in docs/EVIDENCE.md. No other completion is recorded.
 ```
 
 ### docs/DESIGN.md
@@ -103,11 +126,15 @@ Completion 1: F1 completed at baseline N1; matching checks and review are in doc
 
 ## Structure
 
-Intended structure: a note editor calls a note store. Search reads that store and returns matching text. This describes the design, not measured runtime behavior.
+Intended structure: a note editor calls a note store. Search reads that
+store and returns matching text. This describes the design, not measured
+runtime behavior.
 
 ## Decisions
 
-D1, accepted: store notes locally to support use without a connection. No superseding decision is recorded. The consequence is that multi-device synchronization is not part of the current design.
+D1, accepted: store notes locally to support use without a connection.
+No superseding decision is recorded. The consequence is that
+multi-device synchronization is not part of the current design.
 ```
 
 ### docs/EVIDENCE.md
@@ -117,10 +144,20 @@ D1, accepted: store notes locally to support use without a connection. No supers
 
 ## Evidence
 
-F1, baseline N1: illustrative save/retrieve check PASS; independent review ACCEPTED. Both concern only F1's contract at N1.
-F2, baseline N2: search checks NOT RUN; review NOT RECORDED. F1's results do not validate F2. These fictional excerpts contain no executable code or underlying reports.
+F1, baseline N1: illustrative save/retrieve check PASS; independent
+review ACCEPTED. Both concern only F1's contract at N1.
+F2, baseline N2: search checks NOT RUN; review NOT RECORDED. F1's
+results do not validate F2. These fictional excerpts contain no
+executable code or underlying reports.
 ```
 
 ## Reading walkthrough
 
-For "review current work," use the map to select F2 from feature state. Read its search contract and N2 evidence. The evidence establishes a gap: checks have not run and no review is recorded. Read Structure only if evaluating the proposed search design. F1's completion checks cannot validate F2; F3's contract and unrelated history need not be loaded. The fixture cannot substantiate implementation behavior or unseen local progress.
+For "review current work":
+
+1. Select F2 from feature state.
+2. Read its search contract and N2 evidence: checks have not run and no review is recorded.
+3. Read Structure only if evaluating the proposed search design.
+4. Stop at the specific evidence gap. F1's completion checks cannot validate F2; F3's contract and unrelated history need not be loaded.
+
+The fixture cannot substantiate implementation behavior or unseen local progress.

@@ -20,12 +20,12 @@ Describe only the snapshot available during the task. Remote readers leave unsee
 
 | Topic / purpose | Source | Authority | Read when |
 | --- | --- | --- | --- |
-| State / Current Work | [Package status](README.md#status); active work is **Not documented** in a maintained tracker | Authoritative for declared package status, not session or Git state | Understanding this package or identifying a missing work record |
-| Last Completed Work | **Not documented**; no native completion log | No declared completion source | Completion is asked about; do not infer it from a commit alone |
-| Planned Work | **Not documented**; no maintained roadmap | No declared planning source | Planning changes; obtain scope from the task |
-| Architecture | [Core](SPEC.md#core) and [map structure](SPEC.md#map-structure) | Authoritative for intended convention design | Questions or changes affecting meanings or the map interface |
-| Decisions | [Specification](SPEC.md); [research recommendation](docs/research.md#recommendation) | Specification is normative; research supports its rationale, not a formal decision history | Explaining choices or checking a proposed change |
-| Validation / Evidence | [Manual acceptance checklist](docs/research.md#manual-acceptance-checklist); [initial validation record](docs/research.md#validation-record); [Phase 2 validation record](docs/research.md#phase-2-validation-record); [generalization cases](examples/generalization-validation.md); select the record and relevant cases for the change and baseline | Checklist defines scenarios; records cover only their stated documentation snapshots; cases are fictional reading fixtures | Reviewing a documentation change or auditing its checks |
+| State / Current Work | [Status](README.md#status); active work **Not documented** in a maintained tracker | Authoritative for package status; not session or Git state | Package state or missing work records |
+| Last Completed Work | **Not documented**; no native completion log | No declared completion source | Completion questions; a commit alone is insufficient |
+| Planned Work | **Not documented**; no maintained roadmap | No declared planning source | Planning; obtain scope from the task |
+| Architecture | [Core](SPEC.md#core); [map structure](SPEC.md#map-structure) | Authoritative for intended convention design | Meanings or map-interface questions/changes |
+| Decisions | [SPEC](SPEC.md); [rationale](docs/research.md#recommendation) | SPEC is normative; research supports rationale, not formal history | Choices or proposed changes |
+| Validation / Evidence | [Checklist](docs/research.md#manual-acceptance-checklist); [initial record](docs/research.md#validation-record); [Phase 2 record](docs/research.md#phase-2-validation-record); [cases](examples/generalization-validation.md) | Checklist defines scenarios; records cover stated snapshots; cases are fictional | Documentation review or evidence audit |
 
 ## Loading rules
 

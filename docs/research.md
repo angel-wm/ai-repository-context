@@ -2,16 +2,31 @@
 
 Research date: 2026-10-03. This compares documented formats and practices, not real-project case studies. Source links support the comparisons; they are not adoption or example dependencies.
 
+Dated validation records describe their original snapshots. Presentation changes do not extend those records to later revisions.
+
 ## Existing conventions
 
-| Convention or practice | Solves / covers | Does not prescribe for this request | Decision |
-| --- | --- | --- | --- |
-| [AGENTS.md](https://agents.md/) | Predictable repository guidance, setup, tests, conventions, and context in flexible Markdown | Common work-state meanings, topic authority, publication visibility, or a task-reading contract | Complement with a map link; a context section could be an extension, but the separate map serves all readers |
-| [llms.txt](https://llmstxt.org/) | Small Markdown overview of website content with annotated links and progressive retrieval | Native repository work models, completion rules, or local-versus-published state | Borrow the curated-map principle; do not claim format compatibility or require the website convention |
-| [README conventions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) | Familiar introduction, getting started, and documentation discovery with relative links | A shared authority and state-discovery interface | Adopt as the recommended discovery point, using one sentence rather than duplicating the map |
-| [Architecture Decision Records](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html) | Decision context, status, consequences, and supersession | Current work, planning, or repository-wide navigation | Accept as an optional source; decision logs, equivalents, and no formal history remain valid |
-| [Tool-specific instruction files](https://code.claude.com/docs/en/memory), [context files](https://geminicli.com/docs/cli/gemini-md/), and [repository instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | Persistent or scoped guidance under tool-defined mechanisms | One tool-independent discovery and work-state contract | Existing files may link to the map; no adapter or loading behavior is required or promised |
-| [Agent Skills](https://agentskills.io/specification) | Reusable capabilities with progressive instruction/resource loading | A plain repository map independent of capability activation | Borrow progressive disclosure; do not package a skill or introduce activation metadata |
+### Coverage and boundaries
+
+| Convention or practice | Solves / covers | Does not prescribe for this request |
+| --- | --- | --- |
+| [AGENTS.md](https://agents.md/) | Predictable repository guidance, setup, tests, conventions, and context in flexible Markdown | Common work-state meanings, topic authority, publication visibility, or a task-reading contract |
+| [llms.txt](https://llmstxt.org/) | Small Markdown overview of website content with annotated links and progressive retrieval | Native repository work models, completion rules, or local-versus-published state |
+| [README conventions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) | Familiar introduction, getting started, and documentation discovery with relative links | A shared authority and state-discovery interface |
+| [Architecture Decision Records](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html) | Decision context, status, consequences, and supersession | Current work, planning, or repository-wide navigation |
+| [Tool-specific instruction files](https://code.claude.com/docs/en/memory), [context files](https://geminicli.com/docs/cli/gemini-md/), and [repository instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | Persistent or scoped guidance under tool-defined mechanisms | One tool-independent discovery and work-state contract |
+| [Agent Skills](https://agentskills.io/specification) | Reusable capabilities with progressive instruction/resource loading | A plain repository map independent of capability activation |
+
+### Use in this convention
+
+| Convention or practice | Decision |
+| --- | --- |
+| AGENTS.md | Complement with a map link; a context section could be an extension, but the separate map serves all readers |
+| llms.txt | Borrow the curated-map principle; do not claim format compatibility or require the website convention |
+| README conventions | Adopt as the recommended discovery point, using one sentence rather than duplicating the map |
+| Architecture Decision Records | Accept as an optional source; decision logs, equivalents, and no formal history remain valid |
+| Tool-specific instruction files, context files, and repository instructions | Existing files may link to the map; no adapter or loading behavior is required or promised |
+| Agent Skills | Borrow progressive disclosure; do not package a skill or introduce activation metadata |
 
 Generated code maps address code structure and symbols, a different navigation layer from work-state, completion, and evidence sources. They may coexist with this convention but are neither required nor implemented. This is a scope distinction, not a claim to have evaluated every code-mapping tool.
 
@@ -33,27 +48,27 @@ No formal profiles or inheritance, universal statuses, copied work-state summari
 
 Review the current documentation snapshot after material changes. Use the included fictional excerpts for scenarios; do not access any external example repository. These are manual reading exercises, not executable tests. Mark a result only after checking it. Structural scans may be run as disposable inspection commands; no permanent tooling belongs in the package.
 
-| Check / scenario | Expected result | Initial draft result |
-| --- | --- | --- |
-| Core coverage | Root map, template, and both examples account for every topic, with sources or explicit absence | Checked: four sections and all source-map topics present; project, work model, publication, and loading covered outside the table |
-| Discovery | Root README exposes the map; specification states SHOULD discovery and MAY instruction-file links; no map duplication | Checked: one discovery sentence; README contains no source map |
-| Independence | No automatic support claim; no real-project case names or dependencies; examples require no external access | Checked: explicit non-support statement; excluded-name scan clear; example content uses no external URLs |
-| Example references | Every fictional path/section corresponds to an included excerpt; at most four source documents per example | Checked: four sources each; 23 fictional links/anchors match included content |
-| Six task routes | Both example maps cover state, review, planning, architecture, historical decisions, and evidence | Checked: routes walked below; each selects relevant sections or identifies a gap |
-| No active work | If a native record says no unit is active, report None; missing records alone cannot establish that | Checked: an explicit no-active-unit variant yields None; this package's missing tracker yields Not documented |
-| Multiple active units | Where native rules permit several, select requested units without imposing one-active-unit rules | Checked: variant allowing parallel F2/F3 selects requested units; unchanged example retains its native single-feature rule |
-| Completed "current" unit | Interpret its completed state under native rules; do not call it active based on its label | Checked: a current-label/closed-state variant is not active; an unclear active-work record remains Unknown |
-| Corrective release | A documentation correction does not change the last completed unit unless native records say so | Checked: W2 documentation correction leaves Design completion at W1 |
-| Missing decisions | With no maintained decision source, report Not documented; do not create ADRs or infer no decisions | Checked: removing the maintained decision source in a reading scenario establishes a documentation gap only |
-| Stale summary | Use declared topic authority; an outdated summary does not overrule native state records | Checked: stale README status cannot overrule FEATURES.md lifecycle state |
-| Conflicting sources | Apply declared authority and report disagreement that remains unresolved | Checked: contradictory equal-authority state records leave an explicit unresolved conflict |
-| Broken reference | Identify the unavailable context; do not silently replace it with a summary | Checked: inaccessible design source blocks an architecture claim without erasing known feature state |
-| Wrong evidence baseline | Earlier-unit checks cannot validate a different unit or revision | Checked: F1/N1 results do not validate F2/N2; W1 Design checks do not close Build/W2 |
-| Remote visibility | Describe only the retrieved published snapshot; unseen local work and unclear provenance remain Unknown | Checked: illustrative labels establish no real publication; remote visibility and unproven supplied-file provenance stay bounded |
-| Local visibility | Separate working changes, commits, and publication evidence; qualify cached comparisons | Checked: clean or committed alone leaves publication unestablished; cached refs require qualification |
-| Bounded loading | Follow task-selected sections and references, not all history, architecture, decisions, or reviews | Checked: feature review stops at absent matching checks/review; phase planning stops at missing predecessor closure |
-| Links and simplicity | Actual local links/anchors resolve; specification approximately <=1,200 words; generic map <=80 lines | Checked: 25 actual local links/anchors; 1,101 specification words; 45 template lines |
-| Scope and license | Exactly the approved eight files; original material uses CC0-1.0; no permanent tooling or publication introduced | Checked: file inventory matches; official CC0 terms included; inspection commands leave no scripts or test framework |
+| Check / scenario | Acceptance and initial draft result |
+| --- | --- |
+| Core coverage | **Expected:** Root map, template, and both examples account for every topic, with sources or explicit absence. **Initial draft result:** Checked: four sections and all source-map topics present; project, work model, publication, and loading covered outside the table |
+| Discovery | **Expected:** Root README exposes the map; specification states SHOULD discovery and MAY instruction-file links; no map duplication. **Initial draft result:** Checked: one discovery sentence; README contains no source map |
+| Independence | **Expected:** No automatic support claim; no real-project case names or dependencies; examples require no external access. **Initial draft result:** Checked: explicit non-support statement; excluded-name scan clear; example content uses no external URLs |
+| Example references | **Expected:** Every fictional path/section corresponds to an included excerpt; at most four source documents per example. **Initial draft result:** Checked: four sources each; 23 fictional links/anchors match included content |
+| Six task routes | **Expected:** Both example maps cover state, review, planning, architecture, historical decisions, and evidence. **Initial draft result:** Checked: routes walked below; each selects relevant sections or identifies a gap |
+| No active work | **Expected:** If a native record says no unit is active, report None; missing records alone cannot establish that. **Initial draft result:** Checked: an explicit no-active-unit variant yields None; this package's missing tracker yields Not documented |
+| Multiple active units | **Expected:** Where native rules permit several, select requested units without imposing one-active-unit rules. **Initial draft result:** Checked: variant allowing parallel F2/F3 selects requested units; unchanged example retains its native single-feature rule |
+| Completed "current" unit | **Expected:** Interpret its completed state under native rules; do not call it active based on its label. **Initial draft result:** Checked: a current-label/closed-state variant is not active; an unclear active-work record remains Unknown |
+| Corrective release | **Expected:** A documentation correction does not change the last completed unit unless native records say so. **Initial draft result:** Checked: W2 documentation correction leaves Design completion at W1 |
+| Missing decisions | **Expected:** With no maintained decision source, report Not documented; do not create ADRs or infer no decisions. **Initial draft result:** Checked: removing the maintained decision source in a reading scenario establishes a documentation gap only |
+| Stale summary | **Expected:** Use declared topic authority; an outdated summary does not overrule native state records. **Initial draft result:** Checked: stale README status cannot overrule FEATURES.md lifecycle state |
+| Conflicting sources | **Expected:** Apply declared authority and report disagreement that remains unresolved. **Initial draft result:** Checked: contradictory equal-authority state records leave an explicit unresolved conflict |
+| Broken reference | **Expected:** Identify the unavailable context; do not silently replace it with a summary. **Initial draft result:** Checked: inaccessible design source blocks an architecture claim without erasing known feature state |
+| Wrong evidence baseline | **Expected:** Earlier-unit checks cannot validate a different unit or revision. **Initial draft result:** Checked: F1/N1 results do not validate F2/N2; W1 Design checks do not close Build/W2 |
+| Remote visibility | **Expected:** Describe only the retrieved published snapshot; unseen local work and unclear provenance remain Unknown. **Initial draft result:** Checked: illustrative labels establish no real publication; remote visibility and unproven supplied-file provenance stay bounded |
+| Local visibility | **Expected:** Separate working changes, commits, and publication evidence; qualify cached comparisons. **Initial draft result:** Checked: clean or committed alone leaves publication unestablished; cached refs require qualification |
+| Bounded loading | **Expected:** Follow task-selected sections and references, not all history, architecture, decisions, or reviews. **Initial draft result:** Checked: feature review stops at absent matching checks/review; phase planning stops at missing predecessor closure |
+| Links and simplicity | **Expected:** Actual local links/anchors resolve; specification approximately <=1,200 words; generic map <=80 lines. **Initial draft result:** Checked: 25 actual local links/anchors; 1,101 specification words; 45 template lines |
+| Scope and license | **Expected:** Exactly the approved eight files; original material uses CC0-1.0; no permanent tooling or publication introduced. **Initial draft result:** Checked: file inventory matches; official CC0 terms included; inspection commands leave no scripts or test framework |
 
 ### Task-route walkthroughs
 
@@ -82,18 +97,65 @@ The original checklist and validation record above remain historical evidence fo
 
 The manual reading exercises below use each model's included sources. A successful mapping may establish an explicit information gap; it need not establish undocumented facts. Native selectors retain their meanings, including the level of completion and each unit's baseline.
 
-| Core question | Sprint | Release / milestone | Experiment / research | Maintenance / operations |
-| --- | --- | --- | --- | --- |
-| Can Project be mapped? | README describes Iteration Board. | README describes Package Ledger. | README describes Sample Study. | README describes Queue Care. |
-| Can Published State be mapped? | Handoff source locates the supplied snapshot, independent of completion. | Handoff distinguishes sharing from release closure and authorization. | Notebook handoff works without a release record. | Documentary handoff establishes no operational deployment. |
-| Can Work Model remain native? | Sprint and item states/closure rules remain distinct. | Release and change rules remain distinct. | Hypothesis outcomes and signed closure remain distinct; no implementation lifecycle. | Incident and maintenance states remain distinct. |
-| Can Current Work be determined? | S8 open; I4/I5 doing. | R3 preparing; C32 validating. | X5 running. | I1 mitigating; M1 executing. |
-| Can Last Completed Work be determined? | S7 for sprints; I3 for items; no invented cross-level ordering. | R2 for releases; C31 for changes; selection is level-specific. | X4 is last signed, with inconclusive outcome. | Last ledger entry M0 is complete under maintenance rules. |
-| Can Planned Work be represented? | S9 plan has an unmet S8-closeout dependency. | R4 plan does not authorize work or publication. | X6 proposal requires X5 closure and a start decision. | M2 queue entry requires M1 completion; no roadmap needed. |
-| Can Architecture remain native? | Board/store/filter/sorter design. | Formatter/assembler design. | Study and data-flow structure; no code required. | Queue/workers/store and relevant procedures. |
-| Can Decisions remain optional/native? | D1/D2 live in notes. | D1 lives with checks. | Q1/Q2 live in method rationale without ADRs. | D1 lives in a runbook without a formal log. |
-| Can Evidence be selected by unit/baseline? | I4/SB8 differs from I3/SB7 and S7/SB6. | C32/RC32 and R3/RA3 require different evidence. | X5/P2/D5/A1 differs from X4 and other protocol revisions. | M1/MB2 differs from M0/MB1 and I1/IB2. |
-| Can progressive loading avoid blanket reading? | Select item or sprint and stop at its answer/gap. | Select change or assembled release and relevant checks. | Select investigation, protocol, and matching result. | Select incident/task and relevant runbook sections. |
+#### Sprint
+
+| Core question | Mapping |
+| --- | --- |
+| Can Project be mapped? | README describes Iteration Board. |
+| Can Published State be mapped? | Handoff source locates the supplied snapshot, independent of completion. |
+| Can Work Model remain native? | Sprint and item states/closure rules remain distinct. |
+| Can Current Work be determined? | S8 open; I4/I5 doing. |
+| Can Last Completed Work be determined? | S7 for sprints; I3 for items; no invented cross-level ordering. |
+| Can Planned Work be represented? | S9 plan has an unmet S8-closeout dependency. |
+| Can Architecture remain native? | Board/store/filter/sorter design. |
+| Can Decisions remain optional/native? | D1/D2 live in notes. |
+| Can Evidence be selected by unit/baseline? | I4/SB8 differs from I3/SB7 and S7/SB6. |
+| Can progressive loading avoid blanket reading? | Select item or sprint and stop at its answer/gap. |
+
+#### Release / milestone
+
+| Core question | Mapping |
+| --- | --- |
+| Can Project be mapped? | README describes Package Ledger. |
+| Can Published State be mapped? | Handoff distinguishes sharing from release closure and authorization. |
+| Can Work Model remain native? | Release and change rules remain distinct. |
+| Can Current Work be determined? | R3 preparing; C32 validating. |
+| Can Last Completed Work be determined? | R2 for releases; C31 for changes; selection is level-specific. |
+| Can Planned Work be represented? | R4 plan does not authorize work or publication. |
+| Can Architecture remain native? | Formatter/assembler design. |
+| Can Decisions remain optional/native? | D1 lives with checks. |
+| Can Evidence be selected by unit/baseline? | C32/RC32 and R3/RA3 require different evidence. |
+| Can progressive loading avoid blanket reading? | Select change or assembled release and relevant checks. |
+
+#### Experiment / research
+
+| Core question | Mapping |
+| --- | --- |
+| Can Project be mapped? | README describes Sample Study. |
+| Can Published State be mapped? | Notebook handoff works without a release record. |
+| Can Work Model remain native? | Hypothesis outcomes and signed closure remain distinct; no implementation lifecycle. |
+| Can Current Work be determined? | X5 running. |
+| Can Last Completed Work be determined? | X4 is last signed, with inconclusive outcome. |
+| Can Planned Work be represented? | X6 proposal requires X5 closure and a start decision. |
+| Can Architecture remain native? | Study and data-flow structure; no code required. |
+| Can Decisions remain optional/native? | Q1/Q2 live in method rationale without ADRs. |
+| Can Evidence be selected by unit/baseline? | X5/P2/D5/A1 differs from X4 and other protocol revisions. |
+| Can progressive loading avoid blanket reading? | Select investigation, protocol, and matching result. |
+
+#### Maintenance / operations
+
+| Core question | Mapping |
+| --- | --- |
+| Can Project be mapped? | README describes Queue Care. |
+| Can Published State be mapped? | Documentary handoff establishes no operational deployment. |
+| Can Work Model remain native? | Incident and maintenance states remain distinct. |
+| Can Current Work be determined? | I1 mitigating; M1 executing. |
+| Can Last Completed Work be determined? | Last ledger entry M0 is complete under maintenance rules. |
+| Can Planned Work be represented? | M2 queue entry requires M1 completion; no roadmap needed. |
+| Can Architecture remain native? | Queue/workers/store and relevant procedures. |
+| Can Decisions remain optional/native? | D1 lives in a runbook without a formal log. |
+| Can Evidence be selected by unit/baseline? | M1/MB2 differs from M0/MB1 and I1/IB2. |
+| Can progressive loading avoid blanket reading? | Select incident/task and relevant runbook sections. |
 
 | Work model | Final classification | Finding |
 | --- | --- | --- |
@@ -104,47 +166,103 @@ The manual reading exercises below use each model's included sources. A successf
 
 ### Six task-route results
 
-All 24 new-model routes were walked against the included sources. The linked model sections contain the exact selection paths and reading stops; this table records their resulting answers or gaps. Each result is limited to the fictional records.
+All 24 new-model routes were walked against the included sources. The linked model sections contain the exact selection paths and reading stops; the following tables record their resulting answers or gaps. Each result is limited to the fictional records.
 
-| Route | [Sprint](../examples/generalization-validation.md#sprint-task-routes) | [Release](../examples/generalization-validation.md#release-task-routes) | [Research](../examples/generalization-validation.md#research-task-routes) | [Operations](../examples/generalization-validation.md#operations-task-routes) |
-| --- | --- | --- | --- | --- |
-| Current state | S8 open, I4/I5 doing; completion is level-specific. | R3 preparing, C32 validating; no inferred publication. | X5 running; X4 last signed despite inconclusive outcome. | I1 mitigating and M1 executing; no service-health inference. |
-| Review current work | S8/SB8 review/closeout absent; I4/SB8 checks unrun. Stop at the selected gap. | C32/RC32 checks unrun; stop at missing checks. | X5 matching comparison inconclusive, signoff absent; stop at those limits. | I1 probe inconclusive, resolution/review absent; stop at that gap. |
-| Plan next work | S9 awaits absent S8 closeout; stop. | R4 awaits absent R3 closeout; stop. | X6 awaits absent X5 signed closure; stop. | M2 awaits M1 completion; stop while M1 executes. |
-| Architecture | Intended board/store/filter/sorter; stop at structural answer. | Intended formatter/assembler; stop at structural answer. | Intended grouped-observation study; stop at structural answer. | Intended queue/workers/store and procedure; stop at structural answer. |
-| Historical decision | D1 superseded by accepted D2; stop at no successor. | Accepted D1; stop at no recorded supersession. | Q1 superseded by accepted Q2; stop at no successor. | Runbook D1 accepted; stop at no recorded supersession. |
-| Evidence audit | I4/SB8 unrun; earlier units cannot validate it. | R3/RA3 assembled checks unrun; change checks cannot validate it. | X5/P2/D5/A1 inconclusive, no signoff; X4 cannot close it. | M1/MB2 unrun; M0's result cannot validate it. |
+#### Sprint route results
+
+[Detailed selection and stops](../examples/generalization-validation.md#sprint-task-routes).
+
+| Route | Result |
+| --- | --- |
+| Current state | S8 open, I4/I5 doing; completion is level-specific. |
+| Review current work | S8/SB8 review/closeout absent; I4/SB8 checks unrun. Stop at the selected gap. |
+| Plan next work | S9 awaits absent S8 closeout; stop. |
+| Architecture | Intended board/store/filter/sorter; stop at structural answer. |
+| Historical decision | D1 superseded by accepted D2; stop at no successor. |
+| Evidence audit | I4/SB8 unrun; earlier units cannot validate it. |
+
+#### Release route results
+
+[Detailed selection and stops](../examples/generalization-validation.md#release-task-routes).
+
+| Route | Result |
+| --- | --- |
+| Current state | R3 preparing, C32 validating; no inferred publication. |
+| Review current work | C32/RC32 checks unrun; stop at missing checks. |
+| Plan next work | R4 awaits absent R3 closeout; stop. |
+| Architecture | Intended formatter/assembler; stop at structural answer. |
+| Historical decision | Accepted D1; stop at no recorded supersession. |
+| Evidence audit | R3/RA3 assembled checks unrun; change checks cannot validate it. |
+
+#### Research route results
+
+[Detailed selection and stops](../examples/generalization-validation.md#research-task-routes).
+
+| Route | Result |
+| --- | --- |
+| Current state | X5 running; X4 last signed despite inconclusive outcome. |
+| Review current work | X5 matching comparison inconclusive, signoff absent; stop at those limits. |
+| Plan next work | X6 awaits absent X5 signed closure; stop. |
+| Architecture | Intended grouped-observation study; stop at structural answer. |
+| Historical decision | Q1 superseded by accepted Q2; stop at no successor. |
+| Evidence audit | X5/P2/D5/A1 inconclusive, no signoff; X4 cannot close it. |
+
+#### Operations route results
+
+[Detailed selection and stops](../examples/generalization-validation.md#operations-task-routes).
+
+| Route | Result |
+| --- | --- |
+| Current state | I1 mitigating and M1 executing; no service-health inference. |
+| Review current work | I1 probe inconclusive, resolution/review absent; stop at that gap. |
+| Plan next work | M2 awaits M1 completion; stop while M1 executes. |
+| Architecture | Intended queue/workers/store and procedure; stop at structural answer. |
+| Historical decision | Runbook D1 accepted; stop at no recorded supersession. |
+| Evidence audit | M1/MB2 unrun; M0's result cannot validate it. |
 
 ### Eleven cross-cutting cases
 
 Each variant was read independently against the base excerpts and [variant definitions](../examples/generalization-validation.md#cross-cutting-variants). That document records sources, established facts, unknown/undocumented information, stops, and classification. Intentional missing context in E08 is a passing uncertainty-handling exercise, not a broken base-fixture reference.
 
-| Case | Observed reading result and stop | Final classification |
-| --- | --- | --- |
-| E01 No active work | Explicit State absence yields None; stop at State, without treating plans as active. | Works as-is |
-| E02 Multiple active Work Units | Both sprint items and heterogeneous operational units remain active; stop at selected state, expanding only for the requested review. | Works as-is |
-| E03 No formal roadmap | Native queue covers plans; without a maintained queue, Planned Work is Not documented and actual plans Unknown. Stop at queue/absence. | Works as-is |
-| E04 No formal decision log | Equivalent rationale answers history; removing it yields Not documented, not proof of no decisions. Stop at record/absence. | Works as-is |
-| E05 No formal release record | Handoff locates a snapshot without a release log; removing it leaves the source Not documented and publication unestablished. Stop at provenance/absence. | Works as-is |
-| E06 Stale summary | Topic-authoritative operational state wins over README summary; stop at State and report discrepancy. | Works as-is |
-| E07 Conflicting sources | Equal-authority same-snapshot conflict leaves X5 state Unknown; stop at unresolved disagreement. | Works as-is |
-| E08 Missing or broken reference | Known state/baseline survives; missing selected protocol blocks method-compliance claims. Stop at the missing section. | Works as-is |
-| E09 Evidence from another baseline | Different unit or protocol revision cannot validate selected X5 baseline; stop at mismatch. | Works as-is |
-| E10 Local work newer than published snapshot | Published, local-committed, and working changes stay distinct; unseen local work/publication remains Unknown. Stop at visible provenance. | Works as-is |
-| E11 Very little formal documentation | One README covers purpose/structure/work rules; other sources are Not documented and facts Unknown. Stop at the relevant section or absence. | Works as-is |
+| Case | Result, stop, and classification |
+| --- | --- |
+| E01 No active work | Explicit State absence yields None; stop at State, without treating plans as active. **Classification:** Works as-is |
+| E02 Multiple active Work Units | Both sprint items and heterogeneous operational units remain active; stop at selected state, expanding only for the requested review. **Classification:** Works as-is |
+| E03 No formal roadmap | Native queue covers plans; without a maintained queue, Planned Work is Not documented and actual plans Unknown. Stop at queue/absence. **Classification:** Works as-is |
+| E04 No formal decision log | Equivalent rationale answers history; removing it yields Not documented, not proof of no decisions. Stop at record/absence. **Classification:** Works as-is |
+| E05 No formal release record | Handoff locates a snapshot without a release log; removing it leaves the source Not documented and publication unestablished. Stop at provenance/absence. **Classification:** Works as-is |
+| E06 Stale summary | Topic-authoritative operational state wins over README summary; stop at State and report discrepancy. **Classification:** Works as-is |
+| E07 Conflicting sources | Equal-authority same-snapshot conflict leaves X5 state Unknown; stop at unresolved disagreement. **Classification:** Works as-is |
+| E08 Missing or broken reference | Known state/baseline survives; missing selected protocol blocks method-compliance claims. Stop at the missing section. **Classification:** Works as-is |
+| E09 Evidence from another baseline | Different unit or protocol revision cannot validate selected X5 baseline; stop at mismatch. **Classification:** Works as-is |
+| E10 Local work newer than published snapshot | Published, local-committed, and working changes stay distinct; unseen local work/publication remains Unknown. Stop at visible provenance. **Classification:** Works as-is |
+| E11 Very little formal documentation | One README covers purpose/structure/work rules; other sources are Not documented and facts Unknown. Stop at the relevant section or absence. **Classification:** Works as-is |
 
 ### Existing-example regression controls
 
 The [feature](../examples/feature-based.md) and [phase](../examples/phase-based.md) examples were reread unchanged. All twelve control routes preserve their original native behavior; the new examples impose no parallel-work or closure rules on them.
 
-| Route | Feature control | Phase control |
-| --- | --- | --- |
-| Current state | State selects F2 active; Completions identifies F1 if needed. Stop at those records; retain one-active-feature rule. | State selects Build current and Design last closed. Stop at relevant State records; retain sequential phases. |
-| Review current work | F2 contract + N2 Evidence establish unrun checks and absent review. Stop at that gap; Structure is conditional. | Build scope + W2 checks establish unrun checks and absent closeout. Stop at that gap. |
-| Plan next work | State/Rules + F3 scope show queued export dependent on F1; deliberate authorization remains required. Stop after applicable dependency/completion evidence. | State/Rules + Validate scope require Build closure; Build checks show missing closeout. Stop at unmet predecessor gate. |
-| Architecture | DESIGN.md Structure describes editor/store/search intention; stop without runtime claims. | NOTES.md Structure describes catalog/schedule intention; stop without runtime claims. |
-| Historical decision | D1 accepted, no recorded successor; stop. | D1 accepted at Design, no recorded successor; stop. |
-| Evidence audit | F2/N2 lacks checks/review; F1/N1 cannot validate it. Stop at missing matching evidence. | Build/W2 lacks checks/closeout; Design/W1 cannot close it. Stop at missing matching evidence. |
+#### Feature control
+
+| Route | Result |
+| --- | --- |
+| Current state | State selects F2 active; Completions identifies F1 if needed. Stop at those records; retain one-active-feature rule. |
+| Review current work | F2 contract + N2 Evidence establish unrun checks and absent review. Stop at that gap; Structure is conditional. |
+| Plan next work | State/Rules + F3 scope show queued export dependent on F1; deliberate authorization remains required. Stop after applicable dependency/completion evidence. |
+| Architecture | DESIGN.md Structure describes editor/store/search intention; stop without runtime claims. |
+| Historical decision | D1 accepted, no recorded successor; stop. |
+| Evidence audit | F2/N2 lacks checks/review; F1/N1 cannot validate it. Stop at missing matching evidence. |
+
+#### Phase control
+
+| Route | Result |
+| --- | --- |
+| Current state | State selects Build current and Design last closed. Stop at relevant State records; retain sequential phases. |
+| Review current work | Build scope + W2 checks establish unrun checks and absent closeout. Stop at that gap. |
+| Plan next work | State/Rules + Validate scope require Build closure; Build checks show missing closeout. Stop at unmet predecessor gate. |
+| Architecture | NOTES.md Structure describes catalog/schedule intention; stop without runtime claims. |
+| Historical decision | D1 accepted at Design, no recorded successor; stop. |
+| Evidence audit | Build/W2 lacks checks/closeout; Design/W1 cannot close it. Stop at missing matching evidence. |
 
 ### Explanatory findings and decision gate
 

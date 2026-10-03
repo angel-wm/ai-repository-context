@@ -7,9 +7,9 @@ Project context is often spread across state records, plans, architecture, decis
 For project context and task-specific reading guidance, see [REPO_CONTEXT.md](REPO_CONTEXT.md).
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["README.md"] --> B["REPO_CONTEXT.md"]
-    B --> C["Authoritative project sources"]
+    B --> C["Project sources"]
 ```
 
 ## Adopt the convention
@@ -28,15 +28,12 @@ Keep routine project state in its existing authoritative sources. `REPO_CONTEXT.
 
 ## Load context progressively
 
-Use the task to choose relevant sources. Read enough to support the answer or identify a specific gap, then stop. Preserve the repository's required reading and approval rules.
+1. Start with the context map and applicable repository guidance.
+2. Use the task to select relevant sources.
+3. Read those sources; expand only when the task needs more context.
+4. Stop when the sources support an answer or identify a specific gap.
 
-```mermaid
-flowchart TD
-    A["Task"] --> B["Context map"]
-    B --> C["Select relevant sources"]
-    C --> D["Read only what is needed"]
-    D --> E["Stop"]
-```
+Preserve the repository's required reading and approval rules throughout.
 
 ## Read further
 
@@ -46,7 +43,7 @@ flowchart TD
 - [Generalization validation](examples/generalization-validation.md): four additional fictional work models and edge cases.
 - [Research and manual acceptance checklist](docs/research.md): alternatives, rationale, and bounded validation.
 
-Both fictional examples include every source they reference.
+Each fictional example includes every source it references.
 
 ## Status
 
