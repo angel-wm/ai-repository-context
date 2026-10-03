@@ -48,13 +48,13 @@ publication evidence; qualify cached comparisons.
 ## Loading rules
 
 - State: State, then the requested completion ledger if relevant.
-  Review: Rules, selected sprint/item scope in State, then matching
+- Review: Rules, selected sprint/item scope in State, then matching
   Evidence.
 - Plan: State and Rules, then required completion/evidence.
-  Architecture: Structure, expanding only for an affected decision.
-- History: selected decision and successor. Evidence: selected
-  unit/baseline and its record. Apply the shared reading contract; stop
-  at an answer or gap.
+- Architecture: Structure, expanding only for an affected decision.
+- History: selected decision and successor.
+- Evidence: selected unit/baseline and its record. Apply the shared
+  reading contract; stop at an answer or gap.
 ```
 
 ### Sprint task routes
@@ -185,12 +185,13 @@ publication evidence; qualify cached comparisons.
 ## Loading rules
 
 - State: Rules and State; add the requested completion level only if
-  needed. Review: selected scope and matching Evidence.
-- Plan: State, Rules, and required release closeout. Architecture:
-  Structure, expanding for affected decisions only.
-- History: selected decision and any successor. Evidence: selected
-  change or assembled release and its baseline. Apply the shared reading
-  contract; stop at an answer or gap.
+  needed.
+- Review: selected scope and matching Evidence.
+- Plan: State, Rules, and required release closeout.
+- Architecture: Structure, expanding for affected decisions only.
+- History: selected decision and any successor.
+- Evidence: selected change or assembled release and its baseline. Apply
+  the shared reading contract; stop at an answer or gap.
 ```
 
 ### Release task routes
@@ -320,14 +321,14 @@ changes, commits, and publication evidence; qualify cached comparisons.
 
 ## Loading rules
 
-- State: Rules and Investigations; add Closures if needed. Review:
-  selected hypothesis, scope, Protocol, and matching Evidence.
+- State: Rules and Investigations; add Closures if needed.
+- Review: selected hypothesis, scope, Protocol, and matching Evidence.
 - Plan: Investigations and Rules, then required predecessor closure.
-  Architecture: Structure, expanding for affected protocol/rationale
+- Architecture: Structure, expanding for affected protocol/rationale
   only.
-- History: selected rationale and successor. Evidence: investigation and
-  matching baseline record. Apply the shared reading contract; stop at
-  an answer or gap.
+- History: selected rationale and successor.
+- Evidence: investigation and matching baseline record. Apply the shared
+  reading contract; stop at an answer or gap.
 ```
 
 ### Research task routes
@@ -467,13 +468,14 @@ operational deployment.
 
 ## Loading rules
 
-- State: Rules and State; add Closures if useful. Review: selected
-  procedure/scope and matching Evidence.
-- Plan: Queue and Rules, then required completion. Architecture:
-  Structure, expanding for affected procedure/rationale only.
-- History: selected rationale and successor if any. Evidence: selected
-  unit/baseline only. Apply the shared reading contract; stop at an
-  answer or gap.
+- State: Rules and State; add Closures if useful.
+- Review: selected procedure/scope and matching Evidence.
+- Plan: Queue and Rules, then required completion.
+- Architecture: Structure, expanding for affected procedure/rationale
+  only.
+- History: selected rationale and successor if any.
+- Evidence: selected unit/baseline only. Apply the shared reading
+  contract; stop at an answer or gap.
 ```
 
 ### Operations task routes
