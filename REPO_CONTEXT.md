@@ -25,7 +25,7 @@ Describe only the snapshot available during the task. Remote readers leave unsee
 | Planned Work | **Not documented**; no maintained roadmap | No declared planning source | Planning changes; obtain scope from the task |
 | Architecture | [Core](SPEC.md#core) and [map structure](SPEC.md#map-structure) | Authoritative for intended convention design | Questions or changes affecting meanings or the map interface |
 | Decisions | [Specification](SPEC.md); [research recommendation](docs/research.md#recommendation) | Specification is normative; research supports its rationale, not a formal decision history | Explaining choices or checking a proposed change |
-| Validation / Evidence | [Manual acceptance checklist](docs/research.md#manual-acceptance-checklist) and [validation record](docs/research.md#validation-record) | Checklist defines review scenarios; record covers only its stated local draft | Reviewing a documentation change or auditing its checks |
+| Validation / Evidence | [Manual acceptance checklist](docs/research.md#manual-acceptance-checklist); [initial validation record](docs/research.md#validation-record); [Phase 2 validation record](docs/research.md#phase-2-validation-record); [generalization cases](examples/generalization-validation.md); select the record and relevant cases for the change and baseline | Checklist defines scenarios; records cover only their stated documentation snapshots; cases are fictional reading fixtures | Reviewing a documentation change or auditing its checks |
 
 ## Loading rules
 
@@ -35,7 +35,7 @@ Describe only the snapshot available during the task. Remote readers leave unsee
 - Plan: use declared task scope and README maintenance policy; plans and dependencies are undocumented unless supplied.
 - Architecture: read only the relevant Core or map-structure section first.
 - History: read the research recommendation and relevant comparison; formal historical decisions are not documented.
-- Evidence: read the validation record's scope, then relevant checklist rows. It is not proof of later revisions or publication.
+- Evidence: select the record for the documentation change and baseline; read its scope, then relevant checklist rows or generalization cases. Earlier records do not validate later revisions or publication.
 - Resolve links relative to this map. Read research, templates, and examples only when the task needs them; do not follow every link.
 - Prefer specification meanings over illustrative material. Report unresolved conflicts or inaccessible sources; do not silently substitute supporting material.
 - Stop when sources support the answer or identify a specific gap. Keep routine state in existing sources and change this map only for changed references or reading rules.
